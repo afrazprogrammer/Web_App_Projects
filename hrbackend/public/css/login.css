@@ -1,0 +1,141 @@
+body{
+    padding: 0vh;
+    max-width: 100vw;
+    margin: 0vh;
+    font-family: "Montserrat", sans-serif;
+}
+#signup_main_body{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    min-height: 100vh;
+    background-image: url('../images/audi2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#signup_left{
+    position: relative;
+    left: -5vw;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width:30vw;
+    height: 100vh; 
+    background-color: #E74C3C;
+    text-align: center;
+    font-size: 5vh;
+    color : white;
+}
+
+#signup_center{
+    position: relative;
+    height: 60vh;
+    width: 60vw;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 5vh;
+    color: white;
+    padding: 5vh;
+}
+
+#logo{
+    position: relative;
+    top: 16vh;
+    left: 0.75vw;
+    max-width: 20vw;
+    max-height: 20vh;
+}
+
+#jb_text{
+    position: relative;
+    top:-20vh;
+}
+
+#signup_img_container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+    height: 10vh;
+}
+
+#signup_header{
+    position: relative;
+    top: -2vh;
+}
+
+#signup_form{
+    position: relative;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    max-width: 40vw;
+}
+
+#signup_container{
+    position: relative;
+    top: -5vh;
+    height: 40vh;
+    width: 60vw;
+    text-align: left;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+#email{
+    margin: 1vh;
+    width: 20vw;
+    border-radius: 5vh;
+    border: none;
+    min-height: 4vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 1px solid white;
+    color: white;
+    padding: 0.25vh 0.5vw 0.25vh 0.5vw;
+}
+
+#password{
+    margin: 1vh;
+    width: 20vw;
+    border-radius: 5vh;
+    border: none;
+    min-height: 4vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 1px solid white;
+    color: white;
+    padding: 0.25vh 0.5vw 0.25vh 0.5vw;
+}
+
+#submit_button{
+    position:relative;
+    margin: 1vh;
+    height: 4vh;
+    max-width: 10vw;
+    border-radius: 5vh;
+    border: 1px solid white;
+    background-color:#E74C3C;
+    color: white;
+    left: 6vw;
+}
+
+#submit_button:hover{
+    position:relative;
+    height: 4vh;
+    max-width: 10vw;
+    border-radius: 5vh;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    text-decoration: underline;
+    margin: 1vh;
+    left: 6vw;
+}

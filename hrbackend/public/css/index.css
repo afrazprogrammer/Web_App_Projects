@@ -1,0 +1,221 @@
+body{
+    padding: 0vh;
+    margin: 0vh;
+    font-family: "Montserrat", sans-serif;
+    max-width: 100vw;
+}
+
+#main_body{
+    position: relative;
+    max-width: 100vw;
+    max-height: 100vh;
+    display: grid;
+}
+
+#header{
+    position: relative;
+    display: flex;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    top: 0vh;
+    left: 0vw;
+    max-width: 100vw;
+    height: 7vh;
+    background-color: #E74C3C;
+    color: white;
+    justify-content: right;
+    align-items: center;
+}
+
+#welcome-div{
+    position: relative;
+    top: 0vh;
+    left: 0vw;
+    max-width: 100vw;
+    height: 93vh;
+    background-image: url('../images/audi.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#login{
+    position: relative;
+    margin-right: 2vw;
+    color: white;
+    text-decoration: none;
+}
+
+#signup{
+    position: relative;
+    color: white;
+    text-decoration: none;
+}
+
+#login:hover{
+    position: relative;
+    margin-right: 2vw;
+    color: white;
+    text-decoration: underline;
+}
+
+#signup:hover{
+    position: relative;
+    color: white;
+    text-decoration: underline;
+}
+
+#giki_tag{
+    position: relative;
+    left: 10vw;
+    top: 15vh;
+    max-width: 10vw;
+    font-size: 10vh;
+    color: #E74C3C;
+}
+
+#giki_tag2{
+    position: relative;
+    left: 10vw;
+    top: 8vh;
+    max-width: 20vw;
+    font-size: 5vh;
+    color: white;
+}
+
+#giki_tag3{
+    position: relative;
+    left: 0vw;
+    top: 0vh;
+    max-width: 35vw;
+    font-size: 2vh;
+    color: white;
+    opacity: 1.0;
+}
+
+#text_container{
+    position: relative;
+    left: 10vw;
+    top: 4vh;
+    max-width: 35vw;
+    font-size: 5vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5vh;
+    padding: 20px;
+}
+
+#how_to{
+    display: flex;
+    position: relative;
+    max-width: 100vw;
+    height: 25vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color:#E74C3C;
+    font-weight: bold;
+}
+
+#default_profile{
+    position: relative;
+    max-width: 10vw;
+    max-height: 10vh;
+}
+
+#howto_containers2{
+    position: relative;
+    margin-right: 20vh;
+    margin-left: 20vh;
+}
+
+#feedback{
+    position:relative;
+    display: flex;
+    height: 70vh;
+    max-width: 100vw;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #E74C3C;
+}
+
+#email_updates{
+    position: relative;
+    width: 10vw;
+    height: 3vh;
+    border-radius: 4vh 0vh 0vh 4vh;
+    border: 1px solid gray;
+    padding: 1vh;
+}
+
+#email_updates_submit{
+    position: relative;
+    width: 5vw;
+    height: 5.2vh;
+    border-radius: 0vh 4vh 4vh 0vh;
+    border: 1px solid gray;
+    left: -0.30vw;
+    background-color: black;
+    color: white;
+}
+
+#email_updates_submit:hover{
+    position: relative;
+    width: 5vw;
+    height: 5.2vh;
+    border-radius: 0vh 4vh 4vh 0vh;
+    border: 1px solid white;
+    left: -0.30vw;
+    background-color:#E74C3C;
+    color: white;
+}
+
+#feedback_text{
+    position: relative;
+    max-width: 20vw;
+    color:white;
+    text-align: center;
+}
+
+#feedback_left{
+    position: relative;
+    width: 40vw;
+    height: 40vh;
+    display: grid;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-right: 5vw;
+}
+
+#feedback_right{
+    position: relative;
+    display: grid;
+    height: 50vh;
+    width: 40vw;
+    padding-left: 5vw;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid white;
+}
+
+#feedback_text_right{
+    position: relative;
+    color: white;
+}
+
+#contact_us_container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+#facebook{
+    position: relative;
+    max-width: 3vw;
+    max-height: 3vh;
+    margin-left: 1vw;
+}

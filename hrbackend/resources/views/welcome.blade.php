@@ -19,7 +19,7 @@
             <h1 id = "giki_tag">GIKI</h1>
             <h3 id = "giki_tag2">Career Page</h3>
             <div id = "text_container">
-                <p id = "giki_tag3">Welcome to the GIKI University Job Portal, where opportunities await the brightest minds to shape the future of education. Join our esteemed faculty as professors, lecturers, or lab instructors, or take on leadership roles as rectors, deans, and hostel wardens. Discover your place in academia and contribute to the legacy of excellence at GIKI University.</p>
+                <p id = "giki_tag3">{{ session('success') ? session('success') : "Welcome to the GIKI University Job Portal, where opportunities await the brightest minds to shape the future of education. Join our esteemed faculty as professors, lecturers, or lab instructors, or take on leadership roles as rectors, deans, and hostel wardens. Discover your place in academia and contribute to the legacy of excellence at GIKI University." }}</p>
             </div>
         </div>
         <div id = "how_to">

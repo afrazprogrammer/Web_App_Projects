@@ -18,58 +18,39 @@
                     <button type="submit" id="search-button">🔍</button>
                 </form>
             </div>
+            @if (session('usertype') == 'hr' || session('usertype') == 'hr/')
+                <a id="vp" href="{{ route('post-jobs') }}?usertype={{ session('usertype') }}&name={{ session('name') }}">+ Add a New Vacancy</a>
+            @elseif ($usertype == 'hr' || $usertype == 'hr/')
+                <a id="vp" href="{{ route('post-jobs') }}?usertype={{ $usertype }}&name={{ $name }}">+ Add a New Vacancy</a>
+            @endif
             <a id="vp" href="/view-profile">View Profile</a>
             <a id="ep" href="/edit-profile">Edit Profile</a>
             <a id="lo" href="/">Log Out</a>
         </div>
         <div id = "container">
             <div id="text_header_container">
-                <h1 id="text_header">Vacancies Open</h1>
+                <h1 id="text_header">Vacancies Open {{ session('usertype') ? session('usertype').session('name') : "" }} {{ $usertype ? $usertype.$name : "" }}</h1>
             </div>
+            @foreach($jobs as $job)
             <div id="job_containers">
                 <div id="jc_left">
-                    <h2 id="title">Job Title</h2>
-                    <p id="faculty">Faculty</p>
+                    <h2 id="title">{{ $job->name }}</h2>
+                    <p id="faculty">{{ $job->faculty }}</p>
                     <div id="skills_container">
+                        @foreach(array_slice(explode("#", $job->skills), 1) as $skill)
                         <div id="skills">
-                            <p id="skills_text">React Js</p>
+                            <p id="skills_text">{{ $skill }}</p>
                         </div>
-                        <div id="skills">
-                            <p id="skills_text">React Js</p>
-                        </div>
-                        <div id="skills">
-                            <p id="skills_text">React Js</p>
-                        </div>
+                        @endforeach
                     </div>
-                    <p id="exp">Min Experience: </p>
-                    <p id="post_details">Posted On: 00/00/000 | Open Till: 00/00/0000 | Total Applicants: 00</p>
+                    <p id="exp">Min Experience: {{ $job->experience }} Years</p>
+                    <p id="post_details">Posted On: {{ $job->created_at }} | Open Till: {{ $job->open_until }} | Total Applicants: {{ $job->total_applicants }}</p>
                 </div>
                 <div id="jc_right">
-                    <button id="view_details">View Details</button>
+                    <a href="{{ route('view-details') }}?usertype={{ $usertype }}&name={{ $name }}&title={{ $job->name }}"><button id="view_details">View Details</button></a>
                 </div>
             </div>
-            <div id="job_containers">
-                <div id="jc_left">
-                    <h2 id="title">Job Title</h2>
-                    <p id="faculty">Faculty</p>
-                    <div id="skills_container">
-                        <div id="skills">
-                            <p id="skills_text">React Js</p>
-                        </div>
-                        <div id="skills">
-                            <p id="skills_text">React Js</p>
-                        </div>
-                        <div id="skills">
-                            <p id="skills_text">React Js</p>
-                        </div>
-                    </div>
-                    <p id="exp">Min Experience: </p>
-                    <p id="post_details">Posted On: 00/00/000 | Open Till: 00/00/0000 | Total Applicants: 00</p>
-                </div>
-                <div id="jc_right">
-                    <button id="view_details">View Details</button>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>   
 </body>

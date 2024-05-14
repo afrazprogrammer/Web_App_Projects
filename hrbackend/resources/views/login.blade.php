@@ -10,6 +10,15 @@
     <title>Login | GIKI Careers</title>
 </head>
 <body>
+    @if (session('error'))
+            <div class='error-div'>
+                <ul>
+                    @foreach (session('error') as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+    @endif
     <div id = "signup_main_body">
         <div id = "signup_left">
             <img id="logo" src="images/GIKI Logo.png" />
@@ -19,7 +28,8 @@
         <div id = "signup_center">
             <h3 id = "signup_header">Login</h3>
             <div id = "signup_container">
-                <form id="signup_form">
+                <form id="signup_form" action={{ route('auth') }} method="POST">
+                    @csrf
                     <label for="email">Email</label>
                     <input name="email" type="email" id = "email" placeholder="Email"/>
                     <label for="password">Password</label>

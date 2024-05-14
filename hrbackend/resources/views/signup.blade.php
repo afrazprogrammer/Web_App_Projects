@@ -10,6 +10,15 @@
     <title>Sign Up | GIKI Careers</title>
 </head>
 <body>
+    @if ($errors->any())
+            <div class='error-div'>
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+    @endif
     <div id = "signup_main_body">
         <div id = "signup_left">
             <img id="logo" src="images/GIKI Logo.png" />
@@ -19,16 +28,17 @@
         <div id = "signup_center">
             <h3 id = "signup_header">Sign Up</h3>
             <div id = "signup_container">
-                <form id="signup_form">
+                <form id="signup_form" action={{ route('register') }} method="POST" enctype="multipart/form-data">
+                    @csrf
                     <div id="signup_form_left">
                         <label for="email">Email</label>
                         <input name="email" type="email" id = "email" placeholder="e.g johndoe@example.com"/>
                         <label for="password">Password</label>
                         <input name="password" type="text" id = "password" placeholder="Must have at least 8 characters"/>
                         <label name="name">Full Name</label>
-                        <input name="name" type="text" id = "name" placeholder="e.g John Doe"/>
+                        <input name="full_name" type="text" id = "name" placeholder="e.g John Doe"/>
                         <label for="phone">Phone Number</label>
-                        <input name="phone" type="text" id = "phone" placeholder=" Without spaces e.g: +920000000000"/>
+                        <input name="phone_number" type="text" id = "phone" placeholder=" Without spaces e.g: +920000000000"/>
                         <label for="address">Address</label>
                         <input name="address" type="text" id = "address" placeholder="Address"/>
                         <label for="major">Major</label>
@@ -36,15 +46,15 @@
                     </div>
                     <div id="signup_form_right">
                         <label for="gpa">CGPA</label>
-                        <input name="gpa" type="text" id = "gpa" placeholder="-.--/4.00"/>
+                        <input name="cgpa" type="text" id = "gpa" placeholder="-.--/4.00"/>
                         <label for="faculty">Faculty</label>
                         <input name="faculty" type="text" id = "faculty" placeholder="e.g Computer Science, Chemical Engineering etc"/>
                         <label for="job_type">Preferred Job Type</label>
-                        <input name="job_type" type="text" id = "job_type" placeholder="e.g Professor, Lecturer, Researcher etc"/>
+                        <input name="preferred_job_type" type="text" id = "job_type" placeholder="e.g Professor, Lecturer, Researcher etc"/>
                         <label for="resume">Resume</label>
-                        <input name="resume" type="file" id = "resume" accept="application/pdf"/>
+                        <input name="resume" type="file" id="resume" accept="application/pdf"/>
                         <label for="linkedin">Linked In Profile</label>
-                        <input name="linkedin" type="text" id = "linkedin" placeholder="e.g linkedin.com/in/johndoe"/>
+                        <input name="linkedin_profile" type="text" id = "linkedin" placeholder="e.g linkedin.com/in/johndoe"/>
                         <label for="porfolio">Portfolio/Personal Website</label>
                         <input name="portfolio" type="text" id = "portfolio" placeholder="e.g www.johndoe.com"/>
                     </div>
